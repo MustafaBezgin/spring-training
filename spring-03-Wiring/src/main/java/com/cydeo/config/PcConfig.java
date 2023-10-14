@@ -17,6 +17,6 @@ public class PcConfig {
     @Bean
     public Case caseDell(Dimensions dimensions){
         return new DellCase("220B", "Dell", "240", dimensions);
-    };
+    }
 
 }
