@@ -9,9 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.cydeo.streotype_annotation")
 public class PcConfig {
 
-    @Bean
-    public Dimensions dimensions(){
-        return new Dimensions(50, 10, 10);
-    }
 
 }
