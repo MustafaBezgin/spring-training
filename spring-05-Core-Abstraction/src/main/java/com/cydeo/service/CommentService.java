@@ -1,19 +1,19 @@
 package com.cydeo.service;
 
 import com.cydeo.model.Comment;
-import com.cydeo.proxy.Email;
-import com.cydeo.repository.DBCommentRepository;
+import com.cydeo.proxy.CommentNotificationProxy;
+import com.cydeo.repository.CommentRepository;
 
 public class CommentService {
 
-    private DBCommentRepository dbCommentRepository;
-    private Email email;
+    private CommentRepository commentRepository;
+    private CommentNotificationProxy commentNotificationProxy;
 
     public void publishComment(Comment comment){
         // Save in the DB
-        dbCommentRepository.storeComment(comment);
+        commentRepository.storeComment(comment);
         // Send email
-        email.sendComment(comment);
+        commentNotificationProxy.sendComment(comment);
 
     }
 
