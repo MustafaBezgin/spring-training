@@ -19,10 +19,11 @@ public class StudentController {
 
     }
 
-    @RequestMapping(value = "/welcome",method = RequestMethod.POST) //localhost:8080/student/welcome?name=Ozzy
-    @PostMapping("/welcome")
-    public String welcome(@RequestParam String name){
+    @RequestMapping(value = "/welcome")
+//    @PostMapping("/welcome")
+    public String welcome(@RequestParam int id){
 
+        System.out.println(id);
         return "student/welcome";
     }
 
